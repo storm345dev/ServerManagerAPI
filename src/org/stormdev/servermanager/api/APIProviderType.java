@@ -9,10 +9,10 @@ public enum APIProviderType {
 	/**
 	 * SMCore is being used.
 	 */
-	CORE
+	CORE,
 	
 	/**
 	 * SMHost is being used.
 	 */
-	,HOST
+	HOST
 }
