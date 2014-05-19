@@ -1,14 +1,14 @@
 package org.stormdev.servermanager.api;
 
 public class APIProvider {
-	private static ServerManagerAPI api = null;
+	private static volatile ServerManagerAPI api = null;
 	
 	@SuppressWarnings("unused")
-	private static void setAPI(ServerManagerAPI api){
+	private static void setAPI(ServerManagerAPI ap){
 		if(api != null){
 			return;
 		}
-		APIProvider.api = api;
+		api = ap;
 	}
 	
 	/** Returns the API for you to use
