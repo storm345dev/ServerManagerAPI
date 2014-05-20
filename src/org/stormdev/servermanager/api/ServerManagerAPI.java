@@ -37,4 +37,9 @@ public interface ServerManagerAPI {
 	 * @return The messenger to use for sending messages between servers
 	 */
 	public Messager getMessenger();
+	/**
+	 * Get the connection ID of the provider (Used for messaging), if a server; the serverID, etc
+	 * @return The connection ID
+	 */
+	public String getOwnConnectionID();
 }
