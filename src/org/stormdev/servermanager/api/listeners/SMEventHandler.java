@@ -18,8 +18,34 @@ public @interface SMEventHandler {
 		 * LOWEST, LOW, NORMAL, HIGH, HIGHEST, MONITOR
 		 */
 		public enum Priority {
-		   LOWEST, LOW, NORMAL, HIGH, HIGHEST, MONITOR;
+			/** 
+			 * Called first
+			 */
+		   LOWEST, 
+		   /**
+		    * Called second
+		    */
+		   LOW, 
+		   /**
+		    * Called third
+		    */
+		   NORMAL, 
+		   /**
+		    * Called fourth
+		    */
+		   HIGH, 
+		   /**
+		    * Called fifth
+		    */
+		   HIGHEST, 
+		   /**
+		    * Called last and should NOT modify the event in any way!
+		    */
+		   MONITOR;
 		}
 	 
+		/**
+		 * The priority of the event
+		 */
 		Priority priority() default Priority.NORMAL;
 }
