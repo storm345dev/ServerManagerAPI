@@ -1,4 +1,2 @@
-ServerManagerAPI
+This project is dead
 ================
-
-The public API for ServerManager
